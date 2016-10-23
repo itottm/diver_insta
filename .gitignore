@@ -16,6 +16,6 @@
 !/log/.keep
 /tmp
 
-# Intellij IDEA
+# Editor File
 .idea
 *.iml
