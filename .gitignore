@@ -19,3 +19,6 @@
 # Editor File
 .idea
 *.iml
+
+#dotenv-rails
+.env

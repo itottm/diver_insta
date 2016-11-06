@@ -1,9 +1,20 @@
-<h1>Top#index</h1>
-
 <section class="main-header">
   <p class="flash"><%= notice %><%= alert %></p>
-
-
-
-  ああああああああああああ
 </section>
+<div class="container">
+  <div class="row center-block row-center va-middle">
+    <div class="col-md-8"><%= image_tag('smart_phone.png', alt: '', class: 'main-image') %></div>
+    <div class="col-md-4">
+      <% if user_signed_in? %>
+          <p><%= link_to 'マイページ', edit_user_registration_path, class: 'btn btn-primary btn-block' %></p>
+          <p><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'btn btn-danger btn-block' %></p>
+      <% else %>
+          <p><%= link_to 'ログイン', new_user_session_path, class: 'btn btn-primary btn-block' %></p>
+          <p><%= link_to 'サインアップ', new_user_registration_path, class: 'btn btn-success btn-block' %></p>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+
+

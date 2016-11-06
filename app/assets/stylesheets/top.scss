@@ -4,7 +4,8 @@
 
 header {
   width: 100%;
-  background-color:#2c3e50;
+  background-color:#fff;
+  border-bottom: 1px solid #dbdbdb;
   text-align: center;
 }
 
@@ -15,19 +16,19 @@ header {
 .navbar {
   background-color: transparent;
   color: white;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .navbar-default {
   .navbar-brand {
-    color: #ccc;
+    color: #333;
     &:hover {
-      color: white;
+      color: #999;
     }
   }
   .navbar-nav > li > a {
-    color: #ccc;
+    color: #333;
     &:hover, &:focus {
-      color: white;
+      color: #999;
     }
   }
   .navbar-nav > .open > a {
@@ -61,14 +62,14 @@ header {
   padding: 80px
 }
 
-.main-header {
-  padding-top: 16%;
-  padding-bottom: 15%;
-  width: 100%;
-  background-size: cover;
-  background-image: image-url("header.jpg");
-  background-attachment: fixed;
-}
+//.main-header {
+//  padding-top: 16%;
+//  padding-bottom: 15%;
+//  width: 100%;
+//  background-size: cover;
+//  background-image: image-url("header.jpg");
+//  background-attachment: fixed;
+//}
 
 .main-header img {
   display: block;
@@ -79,16 +80,14 @@ header {
 .about {
   background-color: white;
   color: #333;
-  /*padding-top: 20px;*/
-  /*padding-bottom: 40px;*/
   padding: 80px;
 }
 
 footer {
   width: 100%;
-  background-color:#2c3e50;
+  background-color:#fff;
   padding: 20px 0;
-  color: white;
+  color: #333;
   margin: auto;
   padding-bottom: 10px;
   font-size: 12px;
@@ -103,6 +102,7 @@ body {
   /* Margin bottom by footer height */
   margin-bottom: 75px;
   text-align: center;
+  background-color: #fafafa;
 }
 
 footer {  /*<footer class="footer">*/
@@ -140,4 +140,25 @@ footer {  /*<footer class="footer">*/
 .flash {
   color: #ccc;
   padding-top: 10px;
+}
+
+.main-image {
+  max-width: 50%;
+}
+
+.row-center{
+  text-align:center;
+  letter-spacing:-0.4em;
+}
+.row-center > [class*='col-'] {
+  display:inline-block;
+  letter-spacing:0;
+  vertical-align:top;
+  float:none !important;
+}
+.row-center.va-middle > [class*='col-'] {
+  vertical-align:middle;
+}
+.row-center.va-bottom > [class*='col-'] {
+  vertical-align:bottom;
 }

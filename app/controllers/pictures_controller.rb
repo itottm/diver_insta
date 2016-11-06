@@ -4,6 +4,7 @@ class PicturesController < ApplicationController
 
   def index
     @pictures = Picture.all
+    # binding.pry
   end
 
   def new
@@ -35,7 +36,7 @@ class PicturesController < ApplicationController
 
   def update
     if @picture.update(pictures_params)
-      redirect_to pictures_path, notice: "ブログを更新しました！"
+      redirect_to pictures_path, notice: "写真を更新しました！"
     else
       render action: 'edit'
     end
@@ -48,7 +49,7 @@ class PicturesController < ApplicationController
 
   private
     def pictures_params
-      params.require(:picture).permit(:url, :content)
+      params.require(:picture).permit(:picture_src, :content)
     end
 
     def set_picture

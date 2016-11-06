@@ -1,13 +1,14 @@
 <%= form_for(@picture, url: choose_new_or_edit) do |f| %>
   <%= f.error_messages! %>
 
-  <%#= f.label :タイトル%>
-  <%#= f.text_field :title, class: 'form-control' %>
+
+  <%= f.file_field :picture_src %>
+
   <br>
-  <%= f.label :内容 %>
+  <%= f.label :コメント %>
   <%= f.text_field :content, class: 'form-control' %>
   <br>
   <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
 <% end %>
 
-<%= link_to "ブログ一覧画面にもどる", pictures_path %>
+<p><%= link_to "一覧画面にもどる", pictures_path %></p>

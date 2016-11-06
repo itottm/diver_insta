@@ -9,10 +9,12 @@
   email = Faker::Internet.email
   name = Faker::Name.name
   password = "password"
+  uid = Faker::Number.between(1, 10000000)
   User.create!(email: email,
                name: name,
                password: password,
-               password_confirmation: password
+               password_confirmation: password,
+               uid: uid
   )
 end
 
