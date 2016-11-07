@@ -9,13 +9,13 @@
     <h1>Picture</h1>
 
     <p><%= link_to "写真をUPする", new_picture_path, class: 'btn btn-default' %></p>
-    <% @pictures.each do |picture| %>
+    <% @pictures.reverse_each do |picture| %>
         <div class="row">
 
           <div class="panel panel-default">
             <div class="panel-heading clearfix">
               <div class="pull-left"><%= picture.user.name %></div>
-              <div class="pull-right"><%= time_ago_in_words picture.user.created_at %>前</div>
+              <div class="pull-right"><%= time_ago_in_words picture.created_at %>前</div>
             </div>
             <div class="panel-body">
               <%= image_tag(picture.picture_src, alt: "") %>
